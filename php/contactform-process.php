@@ -1,4 +1,11 @@
 <?php
+
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
+
 $errorMSG = "";
 
 if (empty($_POST["name"])) {
@@ -25,7 +32,7 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "yourname@domain.com";
+$EmailTo = "juliano.pestili@outlook.com";
 $Subject = "New message from Evolo landing page";
 
 // prepare email body text
